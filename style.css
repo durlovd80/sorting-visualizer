@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.grid{
+    display: flex;
+    flex-flow: row wrap;
+    width: 620px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 100px auto;
+}
+body{
+    /* background-color: blue; */
+}
