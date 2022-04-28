@@ -1,6 +1,6 @@
-// let grid = document.querySelector('.grid');
+let grid = document.querySelector('.grid');
 // let timeout = 1000;
-// let squares = []
+let squares = []
 
 // // fixed input in the array from 10 to 1 
 // // for(let i =0;i<10;i++)
@@ -28,8 +28,10 @@
 function fnm(){
     var string = document.getElementById("array").value;
     // document.getElementById("demo").innerHTML=x;
-    var array = string.split(",");
+    var array = string.split(" ");
     // return console.log(array);
-    return document.getElementsByClassName("grid").innerHTML=array;
+    grid.append(array);
+
+    return squares.push(array);
 }
 // grid.append

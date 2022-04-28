@@ -16,6 +16,13 @@ h1{
     border: 2px solid black;
     margin: 100px auto;
 }
-body{
-    /* background-color: blue; */
+
+.grid div{
+    width: 60px;
+    height: inherit;
+    border: 1px solid black;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(217, 44, 44);
+    font-size: x-large;
 }
