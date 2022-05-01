@@ -1,5 +1,5 @@
 let grid = document.querySelector('.grid');
-// let timeout = 1000;
+let timeout = 1000;
 let squares = []
 
 // // fixed input in the array from 10 to 1 
@@ -25,13 +25,27 @@ let squares = []
 //     document.getElementsByClassName("grid").innerHTML=pval;
 // }
 
+
+// To Display user input array
 function fnm(){
     var string = document.getElementById("array").value;
     // document.getElementById("demo").innerHTML=x;
-    var array = string.split(" ");
-    // return console.log(array);
-    grid.append(array);
+    var array = string.split(",");
+    // console.log(array);
+    for(let i=0;i<array.length;i++)
+    {
+        let square = document.createElement('div');
+        square.setAttribute('id',array[i])
+        square.innerHTML = array[i];
+        grid.append(square);
+        console.log(square);
+        squares.push()    
+    }
 
-    return squares.push(array);
+
+    // return console.log(array);
+    // grid.append(array);
+
+    // return squares.push(array);
+    // return squares
 }
-// grid.append
