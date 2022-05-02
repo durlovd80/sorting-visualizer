@@ -1,6 +1,7 @@
 let grid = document.querySelector('.grid');
 let timeout = 1000;
 let squares = []
+var newArray = []
 
 // // fixed input in the array from 10 to 1 
 // // for(let i =0;i<10;i++)
@@ -27,25 +28,42 @@ let squares = []
 
 
 // To Display user input array
-function fnm(){
-    var string = document.getElementById("array").value;
-    // document.getElementById("demo").innerHTML=x;
-    var array = string.split(",");
-    // console.log(array);
-    for(let i=0;i<array.length;i++)
-    {
-        let square = document.createElement('div');
-        square.setAttribute('id',array[i])
-        square.innerHTML = array[i];
-        grid.append(square);
-        console.log(square);
-        squares.push()    
-    }
 
+function fnm() {
+    function setArr() {
+        var string = document.getElementById("array").value;
+        // document.getElementById("demo").innerHTML=x;
+        var array = string.split(",");
+        // console.log(array);
+        newArray = array
+        return newArray;
+    }
+    setArr();
+    // console.log(newArray)
+    for (let i = 0; i < newArray.length; i++) {
+        let square = document.createElement('div');
+        square.setAttribute('id', newArray[i])
+        square.innerHTML = newArray[i];
+        grid.append(square);
+        // console.log(square);
+        squares.push()
+    }
 
     // return console.log(array);
     // grid.append(array);
 
     // return squares.push(array);
-    // return squares
+    return squares;
+}
+
+fnm.setArr();       //Throwing Error
+// console.log(array)
+// console.log(squares);
+function bubbleSort() {
+    // for(let i=0;i<9;i++){
+
+    // }
+
+    // nm = fnm();
+    // console.log(newArray);
 }
