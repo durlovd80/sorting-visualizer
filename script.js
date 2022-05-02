@@ -64,10 +64,39 @@ function fnm() {
 // console.log(squares);
 function bubbleSort() {
 
-    // for(let i=0;i<9;i++){
+    for(let i=0;i<(newArray.length-1);i++){
+        for(let j=0;j< (newArray.length -i -1);j++){
+            setTimeout(()=>{
+                if(parseInt(newArray[j].innerHTML) > parseInt(newArray[j+1].innerHTML)){
+                    if(j<0){
+                        newArray[j-1].classList.remove('exchange')
+                        newArray[j].classList.remove('exchange')
+                    }
 
-    // }
+                    newArray[j].classList.add('exchange');
+                    newArray[j+1].classList.add('exchange');
+                    
+                    setTimeout(() =>{
+                        let temp = newArray[j].innerHTML
+                        newArray[j] = newArray[j+1].innerHTML
+                        newArray[j+1].innerHTML = temp
+                    },1000)
+                
+
+                if( j === newArray.length - i - 2){
+                    setTimeout(() =>{
+                        newArray[j].classList.remove('exchange')
+                        newArray[j+1].classList.remove('exchange')
+                    },2000)
+                }
+            }
+
+            },timeout)
+            timeout = 2000;
+        }
+    }
 
     // nm = fnm();
     console.log(newArray);
 }
+bubbleSort();
