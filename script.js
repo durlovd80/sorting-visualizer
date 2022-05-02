@@ -3,6 +3,9 @@ let timeout = 1000;
 let squares = []
 var newArray = []
 
+var asd = document.getElementById("submit")
+asd.addEventListener("click",setArr)
+asd.addEventListener("click",fnm)
 // // fixed input in the array from 10 to 1 
 // // for(let i =0;i<10;i++)
 // // {
@@ -28,16 +31,18 @@ var newArray = []
 
 
 // To Display user input array
+function setArr() {
+    var string = document.getElementById("array").value;
+    // document.getElementById("demo").innerHTML=x;
+    var array = string.split(",");
+    // console.log(array);
+    newArray = array
+    return newArray;
+}
 
+setArr();
 function fnm() {
-    function setArr() {
-        var string = document.getElementById("array").value;
-        // document.getElementById("demo").innerHTML=x;
-        var array = string.split(",");
-        // console.log(array);
-        newArray = array
-        return newArray;
-    }
+    
     setArr();
     // console.log(newArray)
     for (let i = 0; i < newArray.length; i++) {
@@ -56,14 +61,13 @@ function fnm() {
     return squares;
 }
 
-fnm.setArr();       //Throwing Error
-// console.log(array)
 // console.log(squares);
 function bubbleSort() {
+
     // for(let i=0;i<9;i++){
 
     // }
 
     // nm = fnm();
-    // console.log(newArray);
+    console.log(newArray);
 }
